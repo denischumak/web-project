@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{title}}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <link rel="icon" href="{{ icon }}" type="image/png">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body link="black" vlink="black" alink="black">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="/refresh">
+                    <img src="{{ logotype }}" style="margin-bottom: 10px; max-width: 100%; height: auto;">
+                </a><br>
+                <p align="center">
+                    <font class="main-font" size="2">
+                        {{ slogan }}
+                    </font>
+                </p>
+            </div>
+            <div>
+                <a class="nav-link" href="/exchange">
+                    <font class="main-font" size="5">
+                        Обмен валют
+                    </font>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <a class="nav-link" href="/search">
+                    <font class="main-font" size="5">
+                        Поиск
+                    </font>
+                </a>
+            </div>
+            {% if not current_user.is_authenticated %}
+            <div align="right" style="width: 7%">
+                <div align="center">
+                    <a href="/login">
+                        <img src="/static/img/login.png" align="center" width="40%"><br>
+                        <p align="center">
+                            <font class="main-font">Войти</font>
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div align="right" style="width: 7%; opacity: 50%">
+                <div align="center">
+                    <img src="/static/img/shopping_cart.png" align="center" width="40%"><br>
+                    <p align="center">
+                        <font class="main-font" style="opacity: 70%">Корзина</font>
+                    </p>
+                </div>
+            </div>
+            {% else %}
+            <div align="right" style="width: 7%">
+                <div align="center">
+                    <a href="/user_page">
+                        <img src="/static/img/login.png" align="center" width="40%"><br>
+                        <p align="center">
+                            <font class="main-font">{{ current_user.name }}</font>
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div align="right" style="width: 7%">
+                <div align="center">
+                    <a href="/shopping_cart">
+                        <img src="/static/img/shopping_cart.png" align="center" width="40%"><br>
+                        <p align="center">
+                            <font class="main-font">Корзина</font>
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div align="right" style="width: 7%">
+                <div align="center">
+                    <a href="/orders">
+                        <img src="/static/img/order.png" align="center" width="40%"><br>
+                        <p align="center">
+                            <font class="main-font">Заказы</font>
+                        </p>
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </nav>
+</header>
+{% block content %}
+{% endblock %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+.logo {
+    margin-right: 3%;
+    margin-left: 9%;
+    font-size: 14px;
+    font-family: Open Sans,Arial,Helvetica,sans-serif,Heiti;
+    width: 15%;
+}
+
+.main-font {
+    color: black;
+    face: Bahnschrift;
+    size: 4;
+}
+
+.basic {
+    margin-left: 10%;
+    width: 80%;
+    margin-top: 1%;
+    font-face: Bahnschrift
+}
