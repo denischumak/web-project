@@ -10,5 +10,5 @@ class Item(SerializerMixin, SqlAlchemyBase):
     category = sqlalchemy.Column(sqlalchemy.Integer, sqlalchemy.ForeignKey('categories.id') ,nullable=True)
     description = sqlalchemy.Column(sqlalchemy.String, nullable=True)
     special_price = sqlalchemy.Column(sqlalchemy.Integer, nullable=True)
-    special_currency = sqlalchemy.Column(sqlalchemy.Integer, nullable=True)
+    special_currency = sqlalchemy.Column(sqlalchemy.Integer, sqlalchemy.ForeignKey('currencies.id'), nullable=True)
     photo_name = sqlalchemy.Column(sqlalchemy.String, nullable=True)
