@@ -47,7 +47,7 @@ def get_store_settings():
 # Запуск сервера и выбор случайного магазина
 def main():
     set_current_store()
-    app.run(port=8080, host='127.0.0.1')
+    app.run(host='0.0.0.0')
 
 
 def check_password(password):
