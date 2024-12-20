@@ -30,7 +30,7 @@ jobs:
 
     - name: Check if server is running
       run: |
-        curl http://127.0.0.1:5000/
+        curl http://192.168.0.139:5000
 
     - name: Stop services
       run: docker-compose down
