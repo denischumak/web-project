@@ -1,9 +1,8 @@
 # Инструкция по запуску проекта
-1. Для начала необходимо поставить docker на локальную машину.  
-Если у вас Windows, рекомендуется установить Docker Deskstop: 
-```
-https://www.docker.com/get-started/
-```
+1. Для начала необходимо поставить docker на локальную машину.
+  
+Если у вас Windows, рекомендуется установить Docker Deskstop:  https://www.docker.com/get-started/  
+  
 Если у вас Linux, используйте команды:
 ```
 sudo apt-get update
