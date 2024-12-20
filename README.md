@@ -1,5 +1,5 @@
 # Инструкция по запуску проекта
-1. Для начала необходимо поставить docker на локальную машину.
+1. Для начала необходимо поставить docker на локальную машину.  
 Если у вас Windows, рекомендуется установить Docker Deskstop: 
 ```
 https://www.docker.com/get-started/
@@ -21,4 +21,7 @@ git clone https://github.com/denischumak/web-project
 ```
 docker-compose up
 ```
-Сервер должен начать свою работу на порту 5000.
+5. Откройте сайт:
+```
+http://localhost:5000/
+```
