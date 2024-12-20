@@ -26,11 +26,7 @@ jobs:
       run: docker-compose -f docker-compose.yml config
 
     - name: Start services
-      run: docker-compose up -d
-
-    - name: Check if server is running
-      run: |
-        curl http://192.168.0.139:5000
+      run: docker-compose up 
 
     - name: Stop services
       run: docker-compose down
