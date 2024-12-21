@@ -73,8 +73,6 @@ ORM: SQLAlchemy для работы с объектами (Item, Category, Curre
 
 # UI и API
 
-## API
-
 ### Переход на главную страницу
 
 1. Endpoint: GET /
@@ -109,12 +107,12 @@ ORM: SQLAlchemy для работы с объектами (Item, Category, Curre
 
 1. Endpoint: GET /order/{order_id}
 
-2. Рендерится HTML-шаблон order.html с данными о заказе, включая:
+2. Возвращает HTML-шаблон order.html с данными о заказе, включая:
  - ID заказа.
  - Товары.
  - Общую сумму.
 
-### Страница со всеми заказами
+### Переход на страницу со всеми заказами
 
 1. Endpoint: GET /orders
 
