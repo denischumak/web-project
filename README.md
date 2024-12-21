@@ -24,6 +24,8 @@ docker-compose up
 ```
 http://localhost:5000/
 ```
+# ТЗ проекта, оформленное в XML формате
+### https://drive.google.com/drive/folders/1hFUaBbwNEqiDRHfHx0AlXDsEBJxi4oT9?dmr=1&ec=wgc-drive-globalnav-goto
 
 # Архитектура
 
